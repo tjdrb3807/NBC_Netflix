@@ -7,37 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		450E684D2D1D1D8400523796 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450E684C2D1D1D8400523796 /* MainViewController.swift */; };
 		450E68502D1D1F0E00523796 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 450E684F2D1D1F0E00523796 /* RxCocoa */; };
 		450E68522D1D1F0E00523796 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 450E68512D1D1F0E00523796 /* RxSwift */; };
 		450E68552D1D1F2100523796 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 450E68542D1D1F2100523796 /* SnapKit */; };
+		450E68642D1D1F8900523796 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450E685A2D1D1F8900523796 /* MainViewController.swift */; };
+		450E68652D1D1F8900523796 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450E685D2D1D1F8900523796 /* AppDelegate.swift */; };
+		450E68662D1D1F8900523796 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450E68622D1D1F8900523796 /* SceneDelegate.swift */; };
+		450E68672D1D1F8900523796 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 450E685E2D1D1F8900523796 /* Assets.xcassets */; };
+		450E68692D1D1F8900523796 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 450E68612D1D1F8900523796 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		450E68342D1D1C3100523796 /* NBC_Netflix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NBC_Netflix.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		450E684C2D1D1D8400523796 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		450E685A2D1D1F8900523796 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		450E685D2D1D1F8900523796 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		450E685E2D1D1F8900523796 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		450E685F2D1D1F8900523796 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		450E68602D1D1F8900523796 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		450E68622D1D1F8900523796 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		450E68462D1D1C3200523796 /* Exceptions for "NBC_Netflix" folder in "NBC_Netflix" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 450E68332D1D1C3100523796 /* NBC_Netflix */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		450E68362D1D1C3100523796 /* NBC_Netflix */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				450E68462D1D1C3200523796 /* Exceptions for "NBC_Netflix" folder in "NBC_Netflix" target */,
-			);
-			path = NBC_Netflix;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		450E68312D1D1C3100523796 /* Frameworks */ = {
@@ -56,8 +44,7 @@
 		450E682B2D1D1C3100523796 = {
 			isa = PBXGroup;
 			children = (
-				450E684C2D1D1D8400523796 /* MainViewController.swift */,
-				450E68362D1D1C3100523796 /* NBC_Netflix */,
+				450E68632D1D1F8900523796 /* NBC_Netflix */,
 				450E68352D1D1C3100523796 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -68,6 +55,43 @@
 				450E68342D1D1C3100523796 /* NBC_Netflix.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		450E68592D1D1F8900523796 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		450E685B2D1D1F8900523796 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				450E685A2D1D1F8900523796 /* MainViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		450E685C2D1D1F8900523796 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		450E68632D1D1F8900523796 /* NBC_Netflix */ = {
+			isa = PBXGroup;
+			children = (
+				450E68592D1D1F8900523796 /* Model */,
+				450E685B2D1D1F8900523796 /* View */,
+				450E685C2D1D1F8900523796 /* ViewModel */,
+				450E685D2D1D1F8900523796 /* AppDelegate.swift */,
+				450E685E2D1D1F8900523796 /* Assets.xcassets */,
+				450E685F2D1D1F8900523796 /* Info.plist */,
+				450E68612D1D1F8900523796 /* LaunchScreen.storyboard */,
+				450E68622D1D1F8900523796 /* SceneDelegate.swift */,
+			);
+			path = NBC_Netflix;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,9 +108,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				450E68362D1D1C3100523796 /* NBC_Netflix */,
 			);
 			name = NBC_Netflix;
 			packageProductDependencies = (
@@ -141,6 +162,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				450E68672D1D1F8900523796 /* Assets.xcassets in Resources */,
+				450E68692D1D1F8900523796 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,11 +174,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				450E684D2D1D1D8400523796 /* MainViewController.swift in Sources */,
+				450E68642D1D1F8900523796 /* MainViewController.swift in Sources */,
+				450E68652D1D1F8900523796 /* AppDelegate.swift in Sources */,
+				450E68662D1D1F8900523796 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		450E68612D1D1F8900523796 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				450E68602D1D1F8900523796 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		450E68482D1D1C3200523796 /* Debug */ = {
