@@ -1,0 +1,22 @@
+# Xcode 관련 기본 ignore 설정
+.DS_Store
+*.swp
+*.xcuserstate
+*.xcscmblueprint
+
+# 개인 데이터 및 작업 상태 파일
+xcuserdata/
+UserInterfaceState.xcuserstate
+
+# 빌드 파일
+build/
+DerivedData/
+.idea/
+Pods/
+
+# Swift Package Manager
+/.build/
+.swiftpm/
+
+# CocoaPods
+Pods/
