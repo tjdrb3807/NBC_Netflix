@@ -3,6 +3,7 @@
 *.swp
 *.xcuserstate
 *.xcscmblueprint
+*.pbxproj
 
 # 개인 데이터 및 작업 상태 파일
 xcuserdata/

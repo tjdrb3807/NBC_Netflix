@@ -15,6 +15,10 @@
 		450E68662D1D1F8900523796 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450E68622D1D1F8900523796 /* SceneDelegate.swift */; };
 		450E68672D1D1F8900523796 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 450E685E2D1D1F8900523796 /* Assets.xcassets */; };
 		450E68692D1D1F8900523796 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 450E68612D1D1F8900523796 /* LaunchScreen.storyboard */; };
+		450E686D2D1D202100523796 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450E686C2D1D202100523796 /* Movie.swift */; };
+		450E686F2D1D208300523796 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450E686E2D1D208300523796 /* Video.swift */; };
+		450E68712D1D20EF00523796 /* PosterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450E68702D1D20EF00523796 /* PosterCell.swift */; };
+		450E68732D1D246700523796 /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450E68722D1D246700523796 /* SectionHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +29,10 @@
 		450E685F2D1D1F8900523796 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		450E68602D1D1F8900523796 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		450E68622D1D1F8900523796 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		450E686C2D1D202100523796 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		450E686E2D1D208300523796 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		450E68702D1D20EF00523796 /* PosterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterCell.swift; sourceTree = "<group>"; };
+		450E68722D1D246700523796 /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,8 @@
 		450E68592D1D1F8900523796 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				450E686C2D1D202100523796 /* Movie.swift */,
+				450E686E2D1D208300523796 /* Video.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -68,6 +78,8 @@
 			isa = PBXGroup;
 			children = (
 				450E685A2D1D1F8900523796 /* MainViewController.swift */,
+				450E68702D1D20EF00523796 /* PosterCell.swift */,
+				450E68722D1D246700523796 /* SectionHeaderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -176,7 +188,11 @@
 			files = (
 				450E68642D1D1F8900523796 /* MainViewController.swift in Sources */,
 				450E68652D1D1F8900523796 /* AppDelegate.swift in Sources */,
+				450E68712D1D20EF00523796 /* PosterCell.swift in Sources */,
+				450E686D2D1D202100523796 /* Movie.swift in Sources */,
+				450E68732D1D246700523796 /* SectionHeaderView.swift in Sources */,
 				450E68662D1D1F8900523796 /* SceneDelegate.swift in Sources */,
+				450E686F2D1D208300523796 /* Video.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
