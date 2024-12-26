@@ -24,6 +24,7 @@ enum Section: Int, CaseIterable {
 }
 
 final class MainViewController: UIViewController {
+    private let viewModel = MainViewModel()
     private let disposeBag = DisposeBag()
     
     private var popularMovies = [Movie]()
@@ -54,7 +55,38 @@ final class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.bind()
         self.configureUI()
+    }
+    
+    private func bind() {
+        viewModel.popularMovieSubject
+            .observe(on: MainScheduler.instance)
+            .withUnretained(self)
+            .subscribe(onNext: { vc, movies in
+                vc.popularMovies = movies
+                vc.collectionView.reloadData()
+            }, onError: { error in
+                print("ERROR: \(error)")
+            }).disposed(by: disposeBag)
+        
+        viewModel.topRatedMovieSubject
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { [weak self] movies in
+                self?.topRatedMovies = movies
+                self?.collectionView.reloadData()
+            }, onError: { error in
+                print("에러 발생: \(error)")
+            }).disposed(by: disposeBag)
+        
+        viewModel.popularTVShowSubject
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { [weak self] movies in
+                self?.popularTVShows = movies
+                self?.collectionView.reloadData()
+            }, onError: { error in
+                print("에러 발생: \(error)")
+            }).disposed(by: disposeBag)
     }
     
     private func configureUI() {
@@ -122,7 +154,7 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PosterCell.identifier, for: indexPath) as? PosterCell else { return UICollectionViewCell() }
         
-        switch Section(rawValue: indexPath.row) {
+        switch Section(rawValue: indexPath.section) {
         case .popularMovies:
             cell.configureImage(with: popularMovies[indexPath.row])
         case .topRatedMovies:
@@ -138,5 +170,25 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         Section.allCases.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        viewForSupplementaryElementOfKind kind: String,
+                        at indexPath: IndexPath) -> UICollectionReusableView {
+        // 헤더인 경우에만 구현.
+        guard kind == UICollectionView.elementKindSectionHeader else {
+            return UICollectionReusableView()
+        }
+        
+        guard let headerView = collectionView.dequeueReusableSupplementaryView(
+            ofKind: kind,
+            withReuseIdentifier: SectionHeaderView.identifier,
+            for: indexPath
+        ) as? SectionHeaderView else { return UICollectionReusableView() }
+        
+        let sectionType = Section.allCases[indexPath.section]
+        headerView.configureTitle(with: sectionType.title)
+        
+        return headerView
     }
 }

@@ -19,6 +19,7 @@
 		450E686F2D1D208300523796 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450E686E2D1D208300523796 /* Video.swift */; };
 		450E68712D1D20EF00523796 /* PosterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450E68702D1D20EF00523796 /* PosterCell.swift */; };
 		450E68732D1D246700523796 /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450E68722D1D246700523796 /* SectionHeaderView.swift */; };
+		45F0592F2D1D42690037CE6E /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F0592E2D1D42690037CE6E /* MainViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +34,16 @@
 		450E686E2D1D208300523796 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		450E68702D1D20EF00523796 /* PosterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterCell.swift; sourceTree = "<group>"; };
 		450E68722D1D246700523796 /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
+		45F0592E2D1D42690037CE6E /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		45F0592B2D1D38450037CE6E /* Utils */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Utils;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		450E68312D1D1C3100523796 /* Frameworks */ = {
@@ -87,6 +97,7 @@
 		450E685C2D1D1F8900523796 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				45F0592E2D1D42690037CE6E /* MainViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -94,6 +105,7 @@
 		450E68632D1D1F8900523796 /* NBC_Netflix */ = {
 			isa = PBXGroup;
 			children = (
+				45F0592B2D1D38450037CE6E /* Utils */,
 				450E68592D1D1F8900523796 /* Model */,
 				450E685B2D1D1F8900523796 /* View */,
 				450E685C2D1D1F8900523796 /* ViewModel */,
@@ -120,6 +132,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				45F0592B2D1D38450037CE6E /* Utils */,
 			);
 			name = NBC_Netflix;
 			packageProductDependencies = (
@@ -193,6 +208,7 @@
 				450E68732D1D246700523796 /* SectionHeaderView.swift in Sources */,
 				450E68662D1D1F8900523796 /* SceneDelegate.swift in Sources */,
 				450E686F2D1D208300523796 /* Video.swift in Sources */,
+				45F0592F2D1D42690037CE6E /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
